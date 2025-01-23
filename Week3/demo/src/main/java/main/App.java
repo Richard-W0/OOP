@@ -46,6 +46,7 @@ public class App {
                     break;
                 case 0:
                     exit = true;
+                    System.out.println("Kiitos ohjelman käytöstä.");
             }
         }
     }
