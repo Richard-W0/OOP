@@ -10,7 +10,6 @@ public class Cave implements Serializable {
     public Cave(Player player) {
         this.player = player;
         this.monsterFolder = new ArrayList();
-
     }
 
     public void addMonster(Monster monster) {

@@ -18,11 +18,17 @@ public class App {
             System.out.println("5) Lataa peli");
             System.out.println("0) Lopeta peli");
             String valinta = input.nextLine();
-            int numero;
-            numero = Integer.parseInt(valinta);
+            int numero = Integer.parseInt(valinta);
             switch (numero) {
                 case 1:
+                    System.out.println("Anna hirviön tyyppi: ");
+                    String tyyppi = input.nextLine();
+                    System.out.println("Anna hirviön elämän määrä numerona: ");
+                    String health = input.nextLine();
+                    int hp = Integer.parseInt(health);
+                    Monster monster = new Monster(tyyppi, hp);
 
+                    cave.addMonster(monster);
                     break;
                 case 2:
 
