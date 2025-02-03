@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        System.out.println("Syötä pelaajan nimi: ");
+        String name = input.nextLine();
+        Player player = new Player(name);
+        Cave cave = new Cave(player);
         Boolean exit = false;
         while (!exit) {
-            System.out.println("Syötä pelaajan nimi: ");
-            String name = input.nextLine();
-            Player player = new Player(name);
-            Cave cave = new Cave(player);
             System.out.println("1) Lisää luolaan hirviö");
             System.out.println("2) Listaa hirviöt");
             System.out.println("3) Hyökkää hirviöön");
@@ -43,7 +43,10 @@ public class App {
                     cave.listMonsters();
                     String strTarget = input.nextLine(); // hungarian notation still not outdated
                     int target = Integer.parseInt(strTarget);
-                    // cave.player.attack(monster);
+                    Boolean dead = cave.player.Attack(cave.monsterFolder.get(target - 1));
+                    if (dead) {
+                        cave.monsterFolder.remove(target - 1);
+                    }
                     break;
                 case 4:
 
@@ -53,7 +56,7 @@ public class App {
                     break;
                 case 0:
                     exit = true;
-                    System.out.println("Kiitos ohjelman käytöstä.");
+                    System.out.println("Peli päättyy. Kiitos pelaamisesta!");
 
             }
         }
