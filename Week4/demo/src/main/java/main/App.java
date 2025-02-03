@@ -10,6 +10,7 @@ public class App {
             System.out.println("Syötä pelaajan nimi: ");
             String name = input.nextLine();
             Player player = new Player(name);
+            Cave cave = new Cave(player);
             System.out.println("1) Lisää luolaan hirviö");
             System.out.println("2) Listaa hirviöt");
             System.out.println("3) Hyökkää hirviöön");
