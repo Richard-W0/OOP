@@ -31,10 +31,19 @@ public class App {
                     cave.addMonster(monster);
                     break;
                 case 2:
-
+                    if (!cave.monsterFolder().isEmpty) {
+                        System.out.println("Luolan hirviöt:");
+                    }
+                    cave.listMonsters();
                     break;
                 case 3:
-
+                    if (!cave.monsterFolder().isEmpty) {
+                        System.out.println("Valitse hirviö, johon hyökätä:");
+                    }
+                    cave.listMonsters();
+                    String strTarget = input.nextLine();    //hungarian notation still not outdated 
+                    int target = Integer.parseInt(strTarget)
+                    cave.player.attack(monster)
                     break;
                 case 4:
 
