@@ -1,3 +1,5 @@
+package main;
+
 public class Monster {
     String type;
     int health;
