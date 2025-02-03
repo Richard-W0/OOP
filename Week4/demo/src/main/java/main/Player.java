@@ -1,7 +1,7 @@
 package main;
 
 public class Player {
-    private String name;
+    String name;
 
     public Player(String name)
 
@@ -9,7 +9,7 @@ public class Player {
         this.name = name;
     }
 
-    public void Attack() {
+    public void Attack(Monster monster) {
 
     }
 }
