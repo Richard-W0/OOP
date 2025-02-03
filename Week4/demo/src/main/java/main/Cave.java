@@ -26,6 +26,5 @@ public class Cave implements Serializable {
                 i++;
             }
         }
-
     }
 }
